@@ -44,9 +44,9 @@ def convert_voc_to_coco(bbox):
     
     return [round(a,2) for a in [ x, y, width, height]]   
 
-    
+
 def get_img_id(anns, img_name):
-    """Finds the image id in annotation, given the image name
+    """Finds the image id in annotation, given an image name
 
     Args:
         anns (dict): COCO annotations
@@ -90,7 +90,7 @@ def parse_coco_annot(annotation_path, image_name):
             
             boxes.append(convert_coco_to_voc(bbox))
         
-    return {"boxes": boxes}, anns
+    return boxes, anns
 
 
 def draw_PIL_image(image, boxes, new_path):
@@ -111,17 +111,10 @@ def draw_PIL_image(image, boxes, new_path):
     for i in range(len(boxes)):
         draw.rectangle(xy= boxes[i], outline=(23,241,123), width = 5)
     
-    display(new_image)
+    # display(new_image)
     new_image.save(new_path)
 
 
-
-# def insert_to_coco(bboxes, image_name):
-#     for i, bbox in enumerate(bboxes):
-#         bboxes[i] = convert_voc_to_coco(bbox)
-        
-    
-#     return bboxes
 
 
 def flip(image, boxes):
@@ -322,26 +315,23 @@ def add_boxes_to_coco(boxes, anns, image, image_path):
 def main(image_path, annotation_path, num_of_crops):
     image = Image.open(image_path, mode= "r")
     image = image.convert("RGB")
-    objects, anns = parse_coco_annot(annotation_path, os.path.basename(os.path.normpath(image_path)))
-    boxes = torch.FloatTensor(objects['boxes'])
+    boxes, anns = parse_coco_annot(annotation_path, os.path.basename(os.path.normpath(image_path)))
+    boxes = torch.FloatTensor(boxes)
 
     new_image, new_boxes = flip(image, boxes)
-    # draw_PIL_image(new_image, new_boxes)  
     new_path = image_path.split('.')[-2] + '_flip.jpg'
     new_image.save(new_path)
     
     new_anns = add_boxes_to_coco(new_boxes, anns, new_image, new_path)
     
     
-    crops = 0
     for i in range(num_of_crops):
-        new_path = image_path.split('.')[-2] + '_crop' + str(crops) + '.jpg'
+        new_path = image_path.split('.')[-2] + '_crop' + str(i) + '.jpg'
         new_image,new_boxes= random_crop(image, boxes)
         draw_PIL_image(new_image, new_boxes, new_path)
         new_image.save(new_path)
         
         new_anns = add_boxes_to_coco(new_boxes, anns, new_image, new_path)
-        crops += 1
     
     with open(annotation_path, "w") as outfile:
         json.dump(new_anns, outfile, indent=2)
