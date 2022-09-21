@@ -1,0 +1,902 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>augmentation API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>augmentation</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">from PIL import Image, ImageDraw #version 6.1.0
+import PIL #version 1.2.0
+import torch
+import os
+import xml.etree.ElementTree as ET
+import torchvision.transforms.functional as F
+import numpy as np
+import random
+from IPython.display import display
+import json
+from math import floor, ceil
+import click
+
+def convert_coco_to_voc(bbox):
+    &#34;&#34;&#34;Fuction converting bounding box from COCO format to VOC format
+
+    Args:
+        bbox (list): [x, y, width, height]
+
+    Returns:
+        list: [xmin, ymin, xmax, ymax]
+    &#34;&#34;&#34;
+    xmin = bbox[0]
+    ymin = bbox[1]
+    xmax = bbox[0] + bbox[2]
+    ymax = bbox[1] + bbox[3]
+    
+    return [xmin, ymin, xmax, ymax]
+
+
+def convert_voc_to_coco(bbox):
+    &#34;&#34;&#34;Fuctions converting bounding box from VOC format to COCO format
+
+    Args:
+        bbox (list): [xmin, ymin, xmax, ymax]
+
+    Returns:
+        list: [x, y, width, height]
+    &#34;&#34;&#34;
+    x = float(bbox[0])
+    y = float(bbox[1])
+    width = float(bbox[2]) - float(bbox[0])
+    height = float(bbox[3]) - float(bbox[1])
+    
+    return [round(a,2) for a in [ x, y, width, height]]   
+
+
+def get_img_id(anns, img_name):
+    &#34;&#34;&#34;Finds the image id in annotation, given an image name
+
+    Args:
+        anns (dict): COCO annotations
+        img_name (string): Image name 
+
+    Raises:
+        Exception: When annotations don&#39;t contain the image name
+
+    Returns:
+        int: Id of the given image 
+    &#34;&#34;&#34;
+    images = anns[&#34;images&#34;]
+    for image in images:
+        if image[&#34;file_name&#34;] == img_name:
+            return image[&#34;id&#34;]
+        
+    raise Exception(f&#34;No image with name {img_name} found&#34;)
+
+
+def parse_coco_annot(annotation_path, image_name):
+    &#34;&#34;&#34;Returns bounding boxes of the given image from annotations
+
+    Args:
+        annotation_path (string): Path to the annotation file
+        image_name (string): Name of the desired image 
+
+    Returns:
+        [dict, dict]: [{&#34;boxes&#34;: [boxes in coco format]}, coco annotations]
+    &#34;&#34;&#34;
+    f = open(annotation_path, &#34;r&#34;)
+    anns = json.load(f)
+    img_id = get_img_id(anns, image_name)
+    
+    annotations = anns[&#34;annotations&#34;]
+    
+    boxes = []
+    
+    for ann in annotations:
+        if ann[&#34;image_id&#34;] == img_id:
+            bbox = ann[&#34;bbox&#34;]
+            
+            boxes.append(convert_coco_to_voc(bbox))
+        
+    return boxes, anns
+
+
+def draw_PIL_image(image, boxes, new_path):
+    &#39;&#39;&#39;
+        Draw PIL image
+        image: A PIL image
+        boxes: A tensor of dimensions (#objects, 4)
+    &#39;&#39;&#39;
+    if type(image) != PIL.Image.Image:
+        image = F.to_pil_image(image)
+    new_image = image.copy()
+    draw = ImageDraw.Draw(new_image)
+    if type(boxes) == list:
+        for i, box in enumerate(boxes):
+            boxes[i] = list(box)
+    else:
+        boxes = boxes.tolist()
+    for i in range(len(boxes)):
+        draw.rectangle(xy= boxes[i], outline=(23,241,123), width = 5)
+    
+    # display(new_image)
+    new_image.save(new_path)
+
+
+
+
+def flip(image, boxes):
+    &#39;&#39;&#39;
+        Flip image horizontally.
+        image: a PIL image
+        boxes: Bounding boxes, a tensor of dimensions (#objects, 4)
+    &#39;&#39;&#39;
+    new_image = F.hflip(image)
+    
+    #flip boxes 
+    new_boxes = boxes.clone()
+    new_boxes[:, 0] = image.width - boxes[:, 0]
+    new_boxes[:, 2] = image.width - boxes[:, 2]
+    new_boxes = new_boxes[:, [2, 1, 0, 3]]
+    return new_image, new_boxes
+
+
+
+def intersect(boxes1, boxes2):
+    &#39;&#39;&#39;
+        Find intersection of every box combination between two sets of box
+        boxes1: bounding boxes 1, a tensor of dimensions (n1, 4)
+        boxes2: bounding boxes 2, a tensor of dimensions (n2, 4)
+        
+        Out: Intersection each of boxes1 with respect to each of boxes2, 
+             a tensor of dimensions (n1, n2)
+    &#39;&#39;&#39;
+    n1 = boxes1.size(0)
+    n2 = boxes2.size(0)
+    max_xy = torch.min(boxes1[:, 2:].unsqueeze(1).expand(n1, n2, 2),
+                       boxes2[:, 2:].unsqueeze(0).expand(n1, n2, 2))
+    
+    min_xy = torch.max(boxes1[:, :2].unsqueeze(1).expand(n1, n2, 2),
+                       boxes2[:, :2].unsqueeze(0).expand(n1, n2, 2))
+    inter = torch.clamp(max_xy - min_xy, min=0)  # (n1, n2, 2)
+    return inter[:, :, 0] * inter[:, :, 1]  #(n1, n2)
+
+def find_IoU(boxes1, boxes2):
+    &#39;&#39;&#39;
+        Find IoU between every boxes set of boxes 
+        boxes1: a tensor of dimensions (n1, 4) (left, top, right , bottom)
+        boxes2: a tensor of dimensions (n2, 4)
+        
+        Out: IoU each of boxes1 with respect to each of boxes2, a tensor of 
+             dimensions (n1, n2)
+        
+        Formula: 
+        (box1 ∩ box2) / (box1 u box2) = (box1 ∩ box2) / (area(box1) + area(box2) - (box1 ∩ box2 ))
+    &#39;&#39;&#39;
+    inter = intersect(boxes1, boxes2)
+    area_boxes1 = (boxes1[:, 2] - boxes1[:, 0]) * (boxes1[:, 3] - boxes1[:, 1])
+    area_boxes2 = (boxes2[:, 2] - boxes2[:, 0]) * (boxes2[:, 3] - boxes2[:, 1])
+    
+    area_boxes1 = area_boxes1.unsqueeze(1).expand_as(inter) #(n1, n2)
+    area_boxes2 = area_boxes2.unsqueeze(0).expand_as(inter)  #(n1, n2)
+    union = (area_boxes1 + area_boxes2 - inter)
+    return inter / union
+
+def filter_out_obscured_boxes(boxes, image_w, image_h):
+    &#34;&#34;&#34;Filters out boxes that aren&#39;t entirely in the image
+
+    Args:
+        boxes (list): List of boxes in voc format
+        image_w (float): Width of the cropped image
+        image_h (float): Height of the cropped image
+
+    Returns:
+        list: All the boxes that are entirely in the image
+    &#34;&#34;&#34;
+    ret = []
+    for box in boxes:
+        if floor(box[0]) &gt; 0 and floor(box[1]) &gt; 0 and ceil(box[2]) &lt; floor(image_w) and ceil(box[3]) &lt; floor(image_h):
+            ret.append(box)
+            
+    return ret
+    
+def random_crop(image, boxes):
+    &#39;&#39;&#39;
+        image: A PIL image
+        boxes: Bounding boxes, a tensor of dimensions (#objects, 4)
+    
+        Out: cropped image , new boxes
+    &#39;&#39;&#39;
+    if type(image) == PIL.Image.Image:
+        image = F.to_tensor(image)
+    original_h = image.size(1)
+    original_w = image.size(2)
+    
+    new_image = image
+    new_boxes = boxes
+    for _ in range(50):
+        # Crop dimensions: [0.3, 1] of original dimensions
+        new_h = random.uniform(0.003*original_h, 0.5*original_h)
+        new_w = random.uniform(0.003*original_w, 0.5*original_w)
+        
+        # Aspect ratio constraint b/t .5 &amp; 2
+        if new_h/new_w &lt; 0.5 or new_h/new_w &gt; 2:
+            continue
+        
+        #Crop coordinate
+        left = random.uniform(0, original_w - new_w)
+        right = left + new_w
+        top = random.uniform(0, original_h - new_h)
+        bottom = top + new_h
+        crop = torch.FloatTensor([int(left), int(top), int(right), int(bottom)])
+        
+        #Crop
+        new_image = image[:, int(top):int(bottom), int(left):int(right)] #(3, new_h, new_w)
+        
+        #Center of bounding boxes
+        center_bb = (boxes[:, :2] + boxes[:, 2:])/2.0
+        
+        #Find bounding box has been had center in crop
+        center_in_crop = (center_bb[:, 0] &gt;left) * (center_bb[:, 0] &lt; right) *(center_bb[:, 1] &gt; top) * (center_bb[:, 1] &lt; bottom)    #( #objects)
+        
+        if not center_in_crop.any():
+            continue
+        
+        #take matching bounding box
+        new_boxes = boxes[center_in_crop, :]
+        
+        #Use the box left and top corner or the crop&#39;s
+        new_boxes[:, :2] = torch.max(new_boxes[:, :2], crop[:2])
+        
+        #adjust to crop
+        new_boxes[:, :2] -= crop[:2]
+        
+        new_boxes[:, 2:] = torch.min(new_boxes[:, 2:],crop[2:])
+        
+        #adjust to crop
+        new_boxes[:, 2:] -= crop[:2]
+        new_boxes = filter_out_obscured_boxes(new_boxes, new_w, new_h)
+        if len(new_boxes) == 0:     # Cropped image contain no boxes
+            continue
+        
+        return F.to_pil_image(new_image), new_boxes
+
+def get_largest_id(anns):
+    &#39;&#39;&#39;
+        anns: list of annotations to be searched for largest id
+        
+        Out: the largest id of annotations
+    &#39;&#39;&#39;
+    max_id = float(&#39;-inf&#39;)
+    for ann in anns:
+        if ann[&#34;id&#34;] &gt; max_id:
+            max_id = ann[&#34;id&#34;]
+    
+    return max_id
+    
+def add_boxes_to_coco(boxes, anns, image, image_path):
+    image = F.to_tensor(image)
+    height = image.size(1)
+    width = image.size(2)
+    image_id = get_largest_id(anns[&#34;images&#34;]) + 1
+    file_name = os.path.basename(os.path.normpath(image_path))
+    image_desc = {
+        &#34;coco_url&#34;: &#34;&#34;,
+        &#34;date_captured&#34;: 0,
+        &#34;file_name&#34;: file_name,
+        &#34;flickr_url&#34;: &#34;&#34;,
+        &#34;height&#34;: height,
+        &#34;id&#34;: image_id,
+        &#34;license&#34;: 0,
+        &#34;width&#34;: width
+    }
+    anns[&#34;images&#34;].append(image_desc)
+    
+    ann_id = get_largest_id(anns[&#34;annotations&#34;])
+    for box in boxes:
+        ann_id += 1
+        box = convert_voc_to_coco(box)
+        area = box[2]*box[3]
+
+        new_ann = {
+        &#34;area&#34;: area,
+        &#34;attributes&#34;: {
+            &#34;occluded&#34;: False,
+            &#34;rotation&#34;: 0.0
+        },
+        &#34;bbox&#34;: box,
+        &#34;category_id&#34;: 0,
+        &#34;id&#34;: ann_id,
+        &#34;image_id&#34;: image_id,
+        &#34;iscrowd&#34;: 0,
+        &#34;segmentation&#34;: []
+        }         
+        
+        anns[&#34;annotations&#34;].append(new_ann)
+    
+    return anns
+
+@click.command()
+@click.option(&#39;--image-path&#39;, type=click.Path(exists=True), required=True, help=&#39;Path to the image to be augmented&#39;)
+@click.option(&#39;--annotation-path&#39;, type=click.Path(exists=True), required=True, help=&#39;Path to coco annotations&#39;)
+@click.option(&#39;--num-of-crops&#39;, type=click.INT, default=0, help=&#39;Number of crops to be generated&#39;)
+def main(image_path, annotation_path, num_of_crops):
+    image = Image.open(image_path, mode= &#34;r&#34;)
+    image = image.convert(&#34;RGB&#34;)
+    boxes, anns = parse_coco_annot(annotation_path, os.path.basename(os.path.normpath(image_path)))
+    boxes = torch.FloatTensor(boxes)
+
+    new_image, new_boxes = flip(image, boxes)
+    new_path = image_path.split(&#39;.&#39;)[-2] + &#39;_flip.jpg&#39;
+    new_image.save(new_path)
+    
+    new_anns = add_boxes_to_coco(new_boxes, anns, new_image, new_path)
+    
+    
+    for i in range(num_of_crops):
+        new_path = image_path.split(&#39;.&#39;)[-2] + &#39;_crop&#39; + str(i) + &#39;.jpg&#39;
+        new_image,new_boxes= random_crop(image, boxes)
+        draw_PIL_image(new_image, new_boxes, new_path)
+        new_image.save(new_path)
+        
+        new_anns = add_boxes_to_coco(new_boxes, anns, new_image, new_path)
+    
+    with open(annotation_path, &#34;w&#34;) as outfile:
+        json.dump(new_anns, outfile, indent=2)
+    
+
+
+if __name__ == &#39;__main__&#39;:
+    main()</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="augmentation.add_boxes_to_coco"><code class="name flex">
+<span>def <span class="ident">add_boxes_to_coco</span></span>(<span>boxes, anns, image, image_path)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_boxes_to_coco(boxes, anns, image, image_path):
+    image = F.to_tensor(image)
+    height = image.size(1)
+    width = image.size(2)
+    image_id = get_largest_id(anns[&#34;images&#34;]) + 1
+    file_name = os.path.basename(os.path.normpath(image_path))
+    image_desc = {
+        &#34;coco_url&#34;: &#34;&#34;,
+        &#34;date_captured&#34;: 0,
+        &#34;file_name&#34;: file_name,
+        &#34;flickr_url&#34;: &#34;&#34;,
+        &#34;height&#34;: height,
+        &#34;id&#34;: image_id,
+        &#34;license&#34;: 0,
+        &#34;width&#34;: width
+    }
+    anns[&#34;images&#34;].append(image_desc)
+    
+    ann_id = get_largest_id(anns[&#34;annotations&#34;])
+    for box in boxes:
+        ann_id += 1
+        box = convert_voc_to_coco(box)
+        area = box[2]*box[3]
+
+        new_ann = {
+        &#34;area&#34;: area,
+        &#34;attributes&#34;: {
+            &#34;occluded&#34;: False,
+            &#34;rotation&#34;: 0.0
+        },
+        &#34;bbox&#34;: box,
+        &#34;category_id&#34;: 0,
+        &#34;id&#34;: ann_id,
+        &#34;image_id&#34;: image_id,
+        &#34;iscrowd&#34;: 0,
+        &#34;segmentation&#34;: []
+        }         
+        
+        anns[&#34;annotations&#34;].append(new_ann)
+    
+    return anns</code></pre>
+</details>
+</dd>
+<dt id="augmentation.convert_coco_to_voc"><code class="name flex">
+<span>def <span class="ident">convert_coco_to_voc</span></span>(<span>bbox)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fuction converting bounding box from COCO format to VOC format</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>bbox</code></strong> :&ensp;<code>list</code></dt>
+<dd>[x, y, width, height]</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code></dt>
+<dd>[xmin, ymin, xmax, ymax]</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def convert_coco_to_voc(bbox):
+    &#34;&#34;&#34;Fuction converting bounding box from COCO format to VOC format
+
+    Args:
+        bbox (list): [x, y, width, height]
+
+    Returns:
+        list: [xmin, ymin, xmax, ymax]
+    &#34;&#34;&#34;
+    xmin = bbox[0]
+    ymin = bbox[1]
+    xmax = bbox[0] + bbox[2]
+    ymax = bbox[1] + bbox[3]
+    
+    return [xmin, ymin, xmax, ymax]</code></pre>
+</details>
+</dd>
+<dt id="augmentation.convert_voc_to_coco"><code class="name flex">
+<span>def <span class="ident">convert_voc_to_coco</span></span>(<span>bbox)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fuctions converting bounding box from VOC format to COCO format</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>bbox</code></strong> :&ensp;<code>list</code></dt>
+<dd>[xmin, ymin, xmax, ymax]</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code></dt>
+<dd>[x, y, width, height]</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def convert_voc_to_coco(bbox):
+    &#34;&#34;&#34;Fuctions converting bounding box from VOC format to COCO format
+
+    Args:
+        bbox (list): [xmin, ymin, xmax, ymax]
+
+    Returns:
+        list: [x, y, width, height]
+    &#34;&#34;&#34;
+    x = float(bbox[0])
+    y = float(bbox[1])
+    width = float(bbox[2]) - float(bbox[0])
+    height = float(bbox[3]) - float(bbox[1])
+    
+    return [round(a,2) for a in [ x, y, width, height]]   </code></pre>
+</details>
+</dd>
+<dt id="augmentation.draw_PIL_image"><code class="name flex">
+<span>def <span class="ident">draw_PIL_image</span></span>(<span>image, boxes, new_path)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Draw PIL image
+image: A PIL image
+boxes: A tensor of dimensions (#objects, 4)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def draw_PIL_image(image, boxes, new_path):
+    &#39;&#39;&#39;
+        Draw PIL image
+        image: A PIL image
+        boxes: A tensor of dimensions (#objects, 4)
+    &#39;&#39;&#39;
+    if type(image) != PIL.Image.Image:
+        image = F.to_pil_image(image)
+    new_image = image.copy()
+    draw = ImageDraw.Draw(new_image)
+    if type(boxes) == list:
+        for i, box in enumerate(boxes):
+            boxes[i] = list(box)
+    else:
+        boxes = boxes.tolist()
+    for i in range(len(boxes)):
+        draw.rectangle(xy= boxes[i], outline=(23,241,123), width = 5)
+    
+    # display(new_image)
+    new_image.save(new_path)</code></pre>
+</details>
+</dd>
+<dt id="augmentation.filter_out_obscured_boxes"><code class="name flex">
+<span>def <span class="ident">filter_out_obscured_boxes</span></span>(<span>boxes, image_w, image_h)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Filters out boxes that aren't entirely in the image</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>boxes</code></strong> :&ensp;<code>list</code></dt>
+<dd>List of boxes in voc format</dd>
+<dt><strong><code>image_w</code></strong> :&ensp;<code>float</code></dt>
+<dd>Width of the cropped image</dd>
+<dt><strong><code>image_h</code></strong> :&ensp;<code>float</code></dt>
+<dd>Height of the cropped image</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>list</code></dt>
+<dd>All the boxes that are entirely in the image</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def filter_out_obscured_boxes(boxes, image_w, image_h):
+    &#34;&#34;&#34;Filters out boxes that aren&#39;t entirely in the image
+
+    Args:
+        boxes (list): List of boxes in voc format
+        image_w (float): Width of the cropped image
+        image_h (float): Height of the cropped image
+
+    Returns:
+        list: All the boxes that are entirely in the image
+    &#34;&#34;&#34;
+    ret = []
+    for box in boxes:
+        if floor(box[0]) &gt; 0 and floor(box[1]) &gt; 0 and ceil(box[2]) &lt; floor(image_w) and ceil(box[3]) &lt; floor(image_h):
+            ret.append(box)
+            
+    return ret</code></pre>
+</details>
+</dd>
+<dt id="augmentation.find_IoU"><code class="name flex">
+<span>def <span class="ident">find_IoU</span></span>(<span>boxes1, boxes2)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Find IoU between every boxes set of boxes
+boxes1: a tensor of dimensions (n1, 4) (left, top, right , bottom)
+boxes2: a tensor of dimensions (n2, 4)</p>
+<p>Out: IoU each of boxes1 with respect to each of boxes2, a tensor of
+dimensions (n1, n2)</p>
+<p>Formula:
+(box1 ∩ box2) / (box1 u box2) = (box1 ∩ box2) / (area(box1) + area(box2) - (box1 ∩ box2 ))</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def find_IoU(boxes1, boxes2):
+    &#39;&#39;&#39;
+        Find IoU between every boxes set of boxes 
+        boxes1: a tensor of dimensions (n1, 4) (left, top, right , bottom)
+        boxes2: a tensor of dimensions (n2, 4)
+        
+        Out: IoU each of boxes1 with respect to each of boxes2, a tensor of 
+             dimensions (n1, n2)
+        
+        Formula: 
+        (box1 ∩ box2) / (box1 u box2) = (box1 ∩ box2) / (area(box1) + area(box2) - (box1 ∩ box2 ))
+    &#39;&#39;&#39;
+    inter = intersect(boxes1, boxes2)
+    area_boxes1 = (boxes1[:, 2] - boxes1[:, 0]) * (boxes1[:, 3] - boxes1[:, 1])
+    area_boxes2 = (boxes2[:, 2] - boxes2[:, 0]) * (boxes2[:, 3] - boxes2[:, 1])
+    
+    area_boxes1 = area_boxes1.unsqueeze(1).expand_as(inter) #(n1, n2)
+    area_boxes2 = area_boxes2.unsqueeze(0).expand_as(inter)  #(n1, n2)
+    union = (area_boxes1 + area_boxes2 - inter)
+    return inter / union</code></pre>
+</details>
+</dd>
+<dt id="augmentation.flip"><code class="name flex">
+<span>def <span class="ident">flip</span></span>(<span>image, boxes)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Flip image horizontally.
+image: a PIL image
+boxes: Bounding boxes, a tensor of dimensions (#objects, 4)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def flip(image, boxes):
+    &#39;&#39;&#39;
+        Flip image horizontally.
+        image: a PIL image
+        boxes: Bounding boxes, a tensor of dimensions (#objects, 4)
+    &#39;&#39;&#39;
+    new_image = F.hflip(image)
+    
+    #flip boxes 
+    new_boxes = boxes.clone()
+    new_boxes[:, 0] = image.width - boxes[:, 0]
+    new_boxes[:, 2] = image.width - boxes[:, 2]
+    new_boxes = new_boxes[:, [2, 1, 0, 3]]
+    return new_image, new_boxes</code></pre>
+</details>
+</dd>
+<dt id="augmentation.get_img_id"><code class="name flex">
+<span>def <span class="ident">get_img_id</span></span>(<span>anns, img_name)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Finds the image id in annotation, given an image name</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>anns</code></strong> :&ensp;<code>dict</code></dt>
+<dd>COCO annotations</dd>
+<dt><strong><code>img_name</code></strong> :&ensp;<code>string</code></dt>
+<dd>Image name </dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>Exception</code></dt>
+<dd>When annotations don't contain the image name</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>int</code></dt>
+<dd>Id of the given image</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_img_id(anns, img_name):
+    &#34;&#34;&#34;Finds the image id in annotation, given an image name
+
+    Args:
+        anns (dict): COCO annotations
+        img_name (string): Image name 
+
+    Raises:
+        Exception: When annotations don&#39;t contain the image name
+
+    Returns:
+        int: Id of the given image 
+    &#34;&#34;&#34;
+    images = anns[&#34;images&#34;]
+    for image in images:
+        if image[&#34;file_name&#34;] == img_name:
+            return image[&#34;id&#34;]
+        
+    raise Exception(f&#34;No image with name {img_name} found&#34;)</code></pre>
+</details>
+</dd>
+<dt id="augmentation.get_largest_id"><code class="name flex">
+<span>def <span class="ident">get_largest_id</span></span>(<span>anns)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>anns: list of annotations to be searched for largest id</p>
+<p>Out: the largest id of annotations</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_largest_id(anns):
+    &#39;&#39;&#39;
+        anns: list of annotations to be searched for largest id
+        
+        Out: the largest id of annotations
+    &#39;&#39;&#39;
+    max_id = float(&#39;-inf&#39;)
+    for ann in anns:
+        if ann[&#34;id&#34;] &gt; max_id:
+            max_id = ann[&#34;id&#34;]
+    
+    return max_id</code></pre>
+</details>
+</dd>
+<dt id="augmentation.intersect"><code class="name flex">
+<span>def <span class="ident">intersect</span></span>(<span>boxes1, boxes2)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Find intersection of every box combination between two sets of box
+boxes1: bounding boxes 1, a tensor of dimensions (n1, 4)
+boxes2: bounding boxes 2, a tensor of dimensions (n2, 4)</p>
+<p>Out: Intersection each of boxes1 with respect to each of boxes2,
+a tensor of dimensions (n1, n2)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def intersect(boxes1, boxes2):
+    &#39;&#39;&#39;
+        Find intersection of every box combination between two sets of box
+        boxes1: bounding boxes 1, a tensor of dimensions (n1, 4)
+        boxes2: bounding boxes 2, a tensor of dimensions (n2, 4)
+        
+        Out: Intersection each of boxes1 with respect to each of boxes2, 
+             a tensor of dimensions (n1, n2)
+    &#39;&#39;&#39;
+    n1 = boxes1.size(0)
+    n2 = boxes2.size(0)
+    max_xy = torch.min(boxes1[:, 2:].unsqueeze(1).expand(n1, n2, 2),
+                       boxes2[:, 2:].unsqueeze(0).expand(n1, n2, 2))
+    
+    min_xy = torch.max(boxes1[:, :2].unsqueeze(1).expand(n1, n2, 2),
+                       boxes2[:, :2].unsqueeze(0).expand(n1, n2, 2))
+    inter = torch.clamp(max_xy - min_xy, min=0)  # (n1, n2, 2)
+    return inter[:, :, 0] * inter[:, :, 1]  #(n1, n2)</code></pre>
+</details>
+</dd>
+<dt id="augmentation.parse_coco_annot"><code class="name flex">
+<span>def <span class="ident">parse_coco_annot</span></span>(<span>annotation_path, image_name)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns bounding boxes of the given image from annotations</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>annotation_path</code></strong> :&ensp;<code>string</code></dt>
+<dd>Path to the annotation file</dd>
+<dt><strong><code>image_name</code></strong> :&ensp;<code>string</code></dt>
+<dd>Name of the desired image </dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>[dict, dict]</code></dt>
+<dd>[{"boxes": [boxes in coco format]}, coco annotations]</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def parse_coco_annot(annotation_path, image_name):
+    &#34;&#34;&#34;Returns bounding boxes of the given image from annotations
+
+    Args:
+        annotation_path (string): Path to the annotation file
+        image_name (string): Name of the desired image 
+
+    Returns:
+        [dict, dict]: [{&#34;boxes&#34;: [boxes in coco format]}, coco annotations]
+    &#34;&#34;&#34;
+    f = open(annotation_path, &#34;r&#34;)
+    anns = json.load(f)
+    img_id = get_img_id(anns, image_name)
+    
+    annotations = anns[&#34;annotations&#34;]
+    
+    boxes = []
+    
+    for ann in annotations:
+        if ann[&#34;image_id&#34;] == img_id:
+            bbox = ann[&#34;bbox&#34;]
+            
+            boxes.append(convert_coco_to_voc(bbox))
+        
+    return boxes, anns</code></pre>
+</details>
+</dd>
+<dt id="augmentation.random_crop"><code class="name flex">
+<span>def <span class="ident">random_crop</span></span>(<span>image, boxes)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>image: A PIL image
+boxes: Bounding boxes, a tensor of dimensions (#objects, 4)</p>
+<p>Out: cropped image , new boxes</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def random_crop(image, boxes):
+    &#39;&#39;&#39;
+        image: A PIL image
+        boxes: Bounding boxes, a tensor of dimensions (#objects, 4)
+    
+        Out: cropped image , new boxes
+    &#39;&#39;&#39;
+    if type(image) == PIL.Image.Image:
+        image = F.to_tensor(image)
+    original_h = image.size(1)
+    original_w = image.size(2)
+    
+    new_image = image
+    new_boxes = boxes
+    for _ in range(50):
+        # Crop dimensions: [0.3, 1] of original dimensions
+        new_h = random.uniform(0.003*original_h, 0.5*original_h)
+        new_w = random.uniform(0.003*original_w, 0.5*original_w)
+        
+        # Aspect ratio constraint b/t .5 &amp; 2
+        if new_h/new_w &lt; 0.5 or new_h/new_w &gt; 2:
+            continue
+        
+        #Crop coordinate
+        left = random.uniform(0, original_w - new_w)
+        right = left + new_w
+        top = random.uniform(0, original_h - new_h)
+        bottom = top + new_h
+        crop = torch.FloatTensor([int(left), int(top), int(right), int(bottom)])
+        
+        #Crop
+        new_image = image[:, int(top):int(bottom), int(left):int(right)] #(3, new_h, new_w)
+        
+        #Center of bounding boxes
+        center_bb = (boxes[:, :2] + boxes[:, 2:])/2.0
+        
+        #Find bounding box has been had center in crop
+        center_in_crop = (center_bb[:, 0] &gt;left) * (center_bb[:, 0] &lt; right) *(center_bb[:, 1] &gt; top) * (center_bb[:, 1] &lt; bottom)    #( #objects)
+        
+        if not center_in_crop.any():
+            continue
+        
+        #take matching bounding box
+        new_boxes = boxes[center_in_crop, :]
+        
+        #Use the box left and top corner or the crop&#39;s
+        new_boxes[:, :2] = torch.max(new_boxes[:, :2], crop[:2])
+        
+        #adjust to crop
+        new_boxes[:, :2] -= crop[:2]
+        
+        new_boxes[:, 2:] = torch.min(new_boxes[:, 2:],crop[2:])
+        
+        #adjust to crop
+        new_boxes[:, 2:] -= crop[:2]
+        new_boxes = filter_out_obscured_boxes(new_boxes, new_w, new_h)
+        if len(new_boxes) == 0:     # Cropped image contain no boxes
+            continue
+        
+        return F.to_pil_image(new_image), new_boxes</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="augmentation.add_boxes_to_coco" href="#augmentation.add_boxes_to_coco">add_boxes_to_coco</a></code></li>
+<li><code><a title="augmentation.convert_coco_to_voc" href="#augmentation.convert_coco_to_voc">convert_coco_to_voc</a></code></li>
+<li><code><a title="augmentation.convert_voc_to_coco" href="#augmentation.convert_voc_to_coco">convert_voc_to_coco</a></code></li>
+<li><code><a title="augmentation.draw_PIL_image" href="#augmentation.draw_PIL_image">draw_PIL_image</a></code></li>
+<li><code><a title="augmentation.filter_out_obscured_boxes" href="#augmentation.filter_out_obscured_boxes">filter_out_obscured_boxes</a></code></li>
+<li><code><a title="augmentation.find_IoU" href="#augmentation.find_IoU">find_IoU</a></code></li>
+<li><code><a title="augmentation.flip" href="#augmentation.flip">flip</a></code></li>
+<li><code><a title="augmentation.get_img_id" href="#augmentation.get_img_id">get_img_id</a></code></li>
+<li><code><a title="augmentation.get_largest_id" href="#augmentation.get_largest_id">get_largest_id</a></code></li>
+<li><code><a title="augmentation.intersect" href="#augmentation.intersect">intersect</a></code></li>
+<li><code><a title="augmentation.parse_coco_annot" href="#augmentation.parse_coco_annot">parse_coco_annot</a></code></li>
+<li><code><a title="augmentation.random_crop" href="#augmentation.random_crop">random_crop</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
